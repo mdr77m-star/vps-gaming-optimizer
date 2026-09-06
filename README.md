@@ -27,7 +27,7 @@ Tested design target: Ubuntu 22.04/24.04, x86_64 and ARM64/aarch64. It should fa
 After uploading this repository to your GitHub account:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/USER/REPO/main/install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/mdr77m-star/vps-gaming-optimizer/main/install.sh | sudo bash
 ```
 
 Replace `USER/REPO` with your repository path. For maximum trust, clone the repository and run the script locally instead of piping it to shell.
