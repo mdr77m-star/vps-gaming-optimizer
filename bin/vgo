@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+BASE=/opt/vps-gaming-optimizer
+case "${1:-help}" in
+  status) exec "$BASE/bin/status.sh" ;;
+  backup) exec "$BASE/bin/backup.sh" ;;
+  apply) exec "$BASE/bin/apply.sh" "${@:2}" ;;
+  benchmark) exec "$BASE/bin/benchmark.sh" "${@:2}" ;;
+  mtr) exec "$BASE/bin/mtr-test.sh" "${@:2}" ;;
+  pmtu) exec "$BASE/bin/pmtu-test.sh" "${@:2}" ;;
+  rollback) exec "$BASE/bin/rollback.sh" ;;
+  monitor) exec "$BASE/bin/monitor.sh" ;;
+  help|*)
+    cat <<HELP
+VPS Gaming Optimizer
+  status       Show detected platform and current network state
+  backup       Create a timestamped backup
+  apply        Apply safe low-latency tuning
+  benchmark    Capture before/after health metrics
+  mtr TARGET   Run MTR to a target
+  pmtu TARGET  Probe path MTU without changing it
+  monitor      Write a health snapshot to the log
+  rollback     Restore the latest project backup and remove project overrides
+HELP
+    ;;
+esac

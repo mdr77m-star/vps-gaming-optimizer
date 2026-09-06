@@ -1,0 +1,6 @@
+# CAKE template — DO NOT enable automatically.
+# You must know the real bottleneck bandwidth first.
+# Example only:
+# tc qdisc replace dev enp0s6 root cake bandwidth 50mbit diffserv4 nat nowash
+#
+# Remove this file's comments only after measuring the bottleneck and validating throughput.

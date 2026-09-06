@@ -1,0 +1,10 @@
+{
+  "streamSettings": {
+    "sockopt": {
+      "tcpFastOpen": true,
+      "tcpcongestion": "bbr",
+      "tcpKeepAliveIdle": 300,
+      "tcpUserTimeout": 10000
+    }
+  }
+}
